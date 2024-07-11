@@ -190,7 +190,7 @@ class PersonalInformationTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.work),
             title: Text('Occupation'),
-            subtitle: Text('Software Engineer'),
+            subtitle: Text('Developer'),
           ),
         ],
       ),
