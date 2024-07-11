@@ -256,7 +256,7 @@ class InterestTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.travel_explore),
             title: Text('Travel'),
-            subtitle: Text('Exploring new countries and cultures'),
+            subtitle: Text('Exploring, countries and cultures'),
           ),
         ],
       ),
