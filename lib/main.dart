@@ -202,7 +202,7 @@ class PersonalInformationTab extends StatelessWidget {
               fontWeight: FontWeight.normal,
             ),
           ),
-          
+          )
         ],
       ),
     );
