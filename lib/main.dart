@@ -123,7 +123,7 @@ class PersonalInformationTab extends StatelessWidget {
           Center(
             child: CircleAvatar(
               radius: 50,
-              backgroundImage: NetworkImage(''), // Replace with your profile image URL
+              backgroundImage: NetworkImage('/home/acr/Documents/FlutterApplication/my_app/lib/Image/Guido-portrait-2014.jpg'), // Replace with your profile image URL
             ),
           ),
           SizedBox(height: 16),
