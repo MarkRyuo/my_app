@@ -57,6 +57,8 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
   ];
   String _currentTitle = "Personal Information";
   IconData _currentIcon = Icons.person;
+  late AnimationController _animationController;
+  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -68,11 +70,19 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
         _currentIcon = _icons[_tabController.index];
       });
     });
+
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 300),
+    );
+
+    _animation = Tween<double>(begin: 0, end: 1).animate(_animationController);
   }
 
   @override
   void dispose() {
     _tabController.dispose();
+    _animationController.dispose();
     super.dispose();
   }
 
@@ -82,7 +92,10 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
       appBar: AppBar(
         title: Row(
           children: [
-            Icon(_currentIcon),
+            RotationTransition(
+              turns: _animation,
+              child: Icon(_currentIcon),
+            ),
             SizedBox(width: 8),
             Text(
               _currentTitle,
