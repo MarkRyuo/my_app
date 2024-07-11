@@ -95,40 +95,25 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
         bottom: TabBar(
           controller: _tabController,
           tabs: <Widget>[
-            Tooltip(
-              message: "Personal Information",
-              child: Tab(
-                icon: Icon(Icons.person),
-                text: "Personal Information",
-              ),
+            Tab(
+              icon: Icon(Icons.person),
+              text: "Personal Information",
             ),
-            Tooltip(
-              message: "Educational Background",
-              child: Tab(
-                icon: Icon(Icons.cast_for_education),
-                text: "Educational Background",
-              ),
+            Tab(
+              icon: Icon(Icons.cast_for_education),
+              text: "Educational Background",
             ),
-            Tooltip(
-              message: "Skills",
-              child: Tab(
-                icon: Icon(Icons.arrow_upward),
-                text: "Skills",
-              ),
+            Tab(
+              icon: Icon(Icons.arrow_upward),
+              text: "Skills",
             ),
-            Tooltip(
-              message: "Interest",
-              child: Tab(
-                icon: Icon(Icons.star),
-                text: "Interest",
-              ),
+            Tab(
+              icon: Icon(Icons.star),
+              text: "Interest",
             ),
-            Tooltip(
-              message: "Contact Details",
-              child: Tab(
-                icon: Icon(Icons.email),
-                text: "Contact Details",
-              ),
+            Tab(
+              icon: Icon(Icons.email),
+              text: "Contact Details",
             ),
           ],
         ),
@@ -187,7 +172,7 @@ class PersonalInformationTab extends StatelessWidget {
           Divider(),
           ListTile(
             leading: Icon(Icons.person),
-            title: Text('Username'),
+            title: Text('Name'),
             subtitle: Text('Guido van Rossum'),
           ),
           ListTile(
@@ -323,6 +308,16 @@ class ContactDetailsTab extends StatelessWidget {
             leading: Icon(Icons.location_on),
             title: Text('Address'),
             subtitle: Text('369 Street, Belmont, California, USA'),
+          ),
+          ListTile(
+            leading: Icon(Icons.location_on),
+             subtitle: Column(
+              title: Text('Social Media'),
+                children: [
+                  Text('Facebook: Guido van Rossum'),
+                  Text('Instagram: ')
+                ],
+              ),
           ),
         ],
       ),
