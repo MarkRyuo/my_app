@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Flutter code sample for [TabBar].
-
 void main() => runApp(const TabBarApp());
 
 class TabBarApp extends StatelessWidget {
@@ -23,16 +21,36 @@ class TabBarExample extends StatefulWidget {
   State<TabBarExample> createState() => _TabBarExampleState();
 }
 
-/// [AnimationController]s can be created with `vsync: this` because of
-/// [TickerProviderStateMixin].
 class _TabBarExampleState extends State<TabBarExample>
     with TickerProviderStateMixin {
   late final TabController _tabController;
+  final List<String> _titles = [
+    "Personal Information",
+    "Educational Background",
+    "Skills",
+    "Interest",
+    "Contact Details"
+  ];
+  final List<IconData> _icons = [
+    Icons.person,
+    Icons.cast_for_education,
+    Icons.arrow_upward,
+    Icons.star,
+    Icons.email
+  ];
+  String _currentTitle = "Personal Information";
+  IconData _currentIcon = Icons.person;
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 5, vsync: this); // Updated length to 4
+    _tabController = TabController(length: 5, vsync: this);
+    _tabController.addListener(() {
+      setState(() {
+        _currentTitle = _titles[_tabController.index];
+        _currentIcon = _icons[_tabController.index];
+      });
+    });
   }
 
   @override
@@ -45,7 +63,13 @@ class _TabBarExampleState extends State<TabBarExample>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Personal Information'),
+        title: Row(
+          children: [
+            Icon(_currentIcon),
+            SizedBox(width: 8),
+            Text(_currentTitle),
+          ],
+        ),
         bottom: TabBar(
           controller: _tabController,
           tabs: const <Widget>[
@@ -68,7 +92,7 @@ class _TabBarExampleState extends State<TabBarExample>
             Tab(
               icon: Icon(Icons.email),
               text: "Contact Details",
-            )
+            ),
           ],
         ),
       ),
@@ -87,8 +111,9 @@ class _TabBarExampleState extends State<TabBarExample>
           Center(
             child: Text("Interest Content"),
           ),
-          Center(child: Text("Contact Details")
-          ,)
+          Center(
+            child: Text("Contact Details Content"),
+          ),
         ],
       ),
     );
