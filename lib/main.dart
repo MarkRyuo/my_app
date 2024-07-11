@@ -276,7 +276,7 @@ class ContactDetailsTab extends StatelessWidget {
         children: <Widget>[
           ListTile(
             leading: Icon(Icons.phone),
-            title: Text('Phone'),
+            title: Text('Phone Number'),
             subtitle: Text('+1 234 764 3490'),
           ),
           ListTile(
