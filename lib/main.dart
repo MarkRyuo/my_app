@@ -76,26 +76,6 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
     super.dispose();
   }
 
-  void showDetailsDialog(String title, String content) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(title),
-          content: Text(content),
-          actions: <Widget>[
-            TextButton(
-              child: Text('Close'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,35 +95,48 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
         bottom: TabBar(
           controller: _tabController,
           tabs: <Widget>[
-            Tab(
-              icon: Icon(Icons.person),
-              text: "Personal Information",
+            Tooltip(
+              message: "Personal Information",
+              child: Tab(
+                icon: Icon(Icons.person),
+                text: "Personal Information",
+              ),
             ),
-            Tab(
-              icon: Icon(Icons.cast_for_education),
-              text: "Educational Background",
+            Tooltip(
+              message: "Educational Background",
+              child: Tab(
+                icon: Icon(Icons.cast_for_education),
+                text: "Educational Background",
+              ),
             ),
-            Tab(
-              icon: Icon(Icons.arrow_upward),
-              text: "Skills",
+            Tooltip(
+              message: "Skills",
+              child: Tab(
+                icon: Icon(Icons.arrow_upward),
+                text: "Skills",
+              ),
             ),
-            Tab(
-              icon: Icon(Icons.star),
-              text: "Interest",
+            Tooltip(
+              message: "Interest",
+              child: Tab(
+                icon: Icon(Icons.star),
+                text: "Interest",
+              ),
             ),
-            Tab(
-              icon: Icon(Icons.email),
-              text: "Contact Details",
+            Tooltip(
+              message: "Contact Details",
+              child: Tab(
+                icon: Icon(Icons.email),
+                text: "Contact Details",
+              ),
             ),
           ],
         ),
       ),
       body: TabBarView(
         controller: _tabController,
-        children: <Widget>[
-          PersonalInformationTab(onTap: () {
-            showDetailsDialog('Username Details', 'Username: Guido van Rossum\nNickname: Python Creator');
-          }),
+        children: const <Widget>[
+          PersonalInformationTab(),
           EducationalBackgroundTab(),
           SkillsTab(),
           InterestTab(),
@@ -155,9 +148,7 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
 }
 
 class PersonalInformationTab extends StatelessWidget {
-  final VoidCallback onTap;
-
-  const PersonalInformationTab({Key? key, required this.onTap}) : super(key: key);
+  const PersonalInformationTab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -198,7 +189,6 @@ class PersonalInformationTab extends StatelessWidget {
             leading: Icon(Icons.person),
             title: Text('Username'),
             subtitle: Text('Guido van Rossum'),
-            onTap: onTap, // Open dialog on tap
           ),
           ListTile(
             leading: Icon(Icons.cake),
