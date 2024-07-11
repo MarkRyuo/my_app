@@ -238,17 +238,17 @@ class SkillsTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.code),
             title: Text('Programming Languages'),
-            subtitle: Text('Python, C, C++'),
+            subtitle: Text('Python, C, C++, Java, Dart'),
           ),
           ListTile(
             leading: Icon(Icons.computer),
             title: Text('Frameworks and Tools'),
-            subtitle: Text('Unix, Amoeba, ABC'),
+            subtitle: Text('Unix, Flutter'),
           ),
           ListTile(
             leading: Icon(Icons.storage),
             title: Text('Databases'),
-            subtitle: Text('MySQL, PostgreSQL'),
+            subtitle: Text('MySQL, PostgreSQL, NoSql'),
           ),
         ],
       ),
