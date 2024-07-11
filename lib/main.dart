@@ -277,7 +277,7 @@ class ContactDetailsTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.phone),
             title: Text('Phone'),
-            subtitle: Text('+1 123 456 7890'),
+            subtitle: Text('+1 234 764 3490'),
           ),
           ListTile(
             leading: Icon(Icons.email),
