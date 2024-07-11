@@ -309,15 +309,18 @@ class ContactDetailsTab extends StatelessWidget {
             title: Text('Address'),
             subtitle: Text('369 Street, Belmont, California, USA'),
           ),
-          ListTile(
+         ListTile(
             leading: Icon(Icons.location_on),
-             subtitle: Column(
-              title: Text('Social Media'),
-                children: [
-                  Text('Facebook: Guido van Rossum'),
-                  Text('Instagram: ')
-                ],
-              ),
+            title: Text('Social Media'),
+            subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Facebook: Guido van Rossum'),
+              Text('Instagram: '),
+    ],
+  ),
+);
+
           ),
         ],
       ),
