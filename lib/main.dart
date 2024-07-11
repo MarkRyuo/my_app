@@ -12,15 +12,15 @@ class TabBarApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark, // Set dark mode
         appBarTheme: AppBarTheme(
-          backgroundColor: Color(0xFF9CDBA6), // Vintage color for app bar
+          backgroundColor: Color.fromARGB(255, 36, 36, 36), 
         ),
         tabBarTheme: TabBarTheme(
-          labelColor: Color(0xFFDEF9C4), // Vintage color for selected tab label
-          unselectedLabelColor: Colors.white,
+          labelColor: Colors.white, // Set label color for selected tab
+          unselectedLabelColor: Colors.white60, // Set color for unselected tabs
           indicator: BoxDecoration(
             border: Border(
               bottom: BorderSide(
-                color: Color(0xFF468585), // Vintage color for tab indicator
+                color: Colors.blueAccent, // Set color for tab indicator
                 width: 2.0,
               ),
             ),
