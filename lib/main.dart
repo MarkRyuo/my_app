@@ -130,6 +130,7 @@ class PersonalInformationTab extends StatelessWidget {
           Center(
             child: Text(
               'Guido van Rossum',
+              Text('Creator of Python')
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
