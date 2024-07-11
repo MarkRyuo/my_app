@@ -274,7 +274,7 @@ class InterestTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.sports_tennis),
             title: Text('Sports'),
-            subtitle: Text('Tennis, Biking'),
+            subtitle: Text('Biking & Basketball'),
           ),
           ListTile(
             leading: Icon(Icons.travel_explore),
@@ -320,7 +320,7 @@ class ContactDetailsTab extends StatelessWidget {
               children: [
                 Text('Facebook: Guido van Rossum'),
                 Text('Instagram: its_me_Guido_van)'),
-              ],
+              ], // Child of Social Media
             ),
           ),
         ],
