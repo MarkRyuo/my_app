@@ -123,13 +123,13 @@ class PersonalInformationTab extends StatelessWidget {
           Center(
             child: CircleAvatar(
               radius: 50,
-              backgroundImage: NetworkImage('/home/acr/Documents/FlutterApplication/my_app/lib/Image/Guido-portrait-2014.jpg'), // Replace with your profile image URL
+              backgroundImage: AssetImage('/home/acr/Documents/FlutterApplication/my_app/lib/Image/Guido-portrait-2014.jpg'), // Profile image URL
             ),
           ),
           SizedBox(height: 16),
           Center(
             child: Text(
-              'John Doe',
+              'Guido van Rossum',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -146,17 +146,17 @@ class PersonalInformationTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.cake),
             title: Text('Date of Birth'),
-            subtitle: Text('January 1, 1990'),
+            subtitle: Text('January 31, 1956'),
           ),
           ListTile(
             leading: Icon(Icons.location_city),
             title: Text('City'),
-            subtitle: Text('New York'),
+            subtitle: Text('Belmont, California, USA'),
           ),
           ListTile(
             leading: Icon(Icons.work),
             title: Text('Occupation'),
-            subtitle: Text('Software Developer'),
+            subtitle: Text('Software Engineer'),
           ),
         ],
       ),
@@ -177,17 +177,12 @@ class EducationalBackgroundTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.school),
             title: Text('High School'),
-            subtitle: Text('ABC High School, Graduated 2008'),
+            subtitle: Text('Montessori Lyceum Amsterdam, Graduated 1974'),
           ),
           ListTile(
             leading: Icon(Icons.school),
             title: Text('Bachelor\'s Degree'),
-            subtitle: Text('XYZ University, Computer Science, Graduated 2012'),
-          ),
-          ListTile(
-            leading: Icon(Icons.school),
-            title: Text('Master\'s Degree'),
-            subtitle: Text('LMN University, Software Engineering, Graduated 2015'),
+            subtitle: Text('University of Amsterdam, Mathematics and Computer Science, Graduated 1982'),
           ),
         ],
       ),
@@ -208,17 +203,17 @@ class SkillsTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.code),
             title: Text('Programming Languages'),
-            subtitle: Text('Dart, Python, Java, JavaScript'),
+            subtitle: Text('Python, C, C++'),
           ),
           ListTile(
             leading: Icon(Icons.computer),
-            title: Text('Frameworks'),
-            subtitle: Text('Flutter, React, Angular'),
+            title: Text('Frameworks and Tools'),
+            subtitle: Text('Unix, Amoeba, ABC'),
           ),
           ListTile(
             leading: Icon(Icons.storage),
             title: Text('Databases'),
-            subtitle: Text('MySQL, PostgreSQL, MongoDB'),
+            subtitle: Text('MySQL, PostgreSQL'),
           ),
         ],
       ),
@@ -239,17 +234,17 @@ class InterestTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.book),
             title: Text('Reading'),
-            subtitle: Text('Fiction, Non-fiction, Technology'),
+            subtitle: Text('Technology, Science Fiction'),
           ),
           ListTile(
-            leading: Icon(Icons.sports_soccer),
+            leading: Icon(Icons.sports_tennis),
             title: Text('Sports'),
-            subtitle: Text('Soccer, Basketball'),
+            subtitle: Text('Tennis, Biking'),
           ),
           ListTile(
-            leading: Icon(Icons.music_note),
-            title: Text('Music'),
-            subtitle: Text('Playing guitar, Piano'),
+            leading: Icon(Icons.travel_explore),
+            title: Text('Travel'),
+            subtitle: Text('Exploring new countries and cultures'),
           ),
         ],
       ),
@@ -270,17 +265,17 @@ class ContactDetailsTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.phone),
             title: Text('Phone'),
-            subtitle: Text('+123 456 7890'),
+            subtitle: Text('+1 123 456 7890'),
           ),
           ListTile(
             leading: Icon(Icons.email),
             title: Text('Email'),
-            subtitle: Text('example@example.com'),
+            subtitle: Text('guido@example.com'),
           ),
           ListTile(
             leading: Icon(Icons.location_on),
             title: Text('Address'),
-            subtitle: Text('123 Street, City, Country'),
+            subtitle: Text('123 Street, Belmont, California, USA'),
           ),
         ],
       ),
