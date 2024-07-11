@@ -194,15 +194,10 @@ class PersonalInformationTab extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.work),
-            title: Text('Occupation'),
-            subtitle: Text(
-            'Guido van Rossum is a Dutch programmer best known as the creator of the Python programming language. Born on January 31, 1956, in Belmont, California, USA, he graduated from the University of Amsterdam with a degree in Mathematics and Computer Science in 1982. Throughout his career, van Rossum has contributed significantly to the development of Python, shaping it into one of the most widely used programming languages in the world.',
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.normal,
-            ),
+            title: Text('Brief Bio'),
+            subtitle: Text('Guido van Rossum is the creator of the Python programming language'),
           ),
-          )
+          
         ],
       ),
     );
