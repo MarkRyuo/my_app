@@ -12,7 +12,7 @@ class TabBarApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark, // Set dark mode
         appBarTheme: AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 36, 36, 36), 
+          backgroundColor: Color.fromARGB(255, 39, 39, 39), 
         ),
         tabBarTheme: TabBarTheme(
           labelColor: Colors.white, // Set label color for selected tab
@@ -57,8 +57,6 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
   ];
   String _currentTitle = "Personal Information";
   IconData _currentIcon = Icons.person;
-  late AnimationController _animationController;
-  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -70,20 +68,32 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
         _currentIcon = _icons[_tabController.index];
       });
     });
-
-    _animationController = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: 300),
-    );
-
-    _animation = Tween<double>(begin: 0, end: 1).animate(_animationController);
   }
 
   @override
   void dispose() {
     _tabController.dispose();
-    _animationController.dispose();
     super.dispose();
+  }
+
+  void showDetailsDialog(String title, String content) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(title),
+          content: Text(content),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Close'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -92,10 +102,7 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
       appBar: AppBar(
         title: Row(
           children: [
-            RotationTransition(
-              turns: _animation,
-              child: Icon(_currentIcon),
-            ),
+            Icon(_currentIcon),
             SizedBox(width: 8),
             Text(
               _currentTitle,
@@ -107,7 +114,7 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
         ),
         bottom: TabBar(
           controller: _tabController,
-          tabs: const <Widget>[
+          tabs: <Widget>[
             Tab(
               icon: Icon(Icons.person),
               text: "Personal Information",
@@ -133,8 +140,10 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
       ),
       body: TabBarView(
         controller: _tabController,
-        children: const <Widget>[
-          PersonalInformationTab(),
+        children: <Widget>[
+          PersonalInformationTab(onTap: () {
+            showDetailsDialog('Username Details', 'Username: Guido van Rossum\nNickname: Python Creator');
+          }),
           EducationalBackgroundTab(),
           SkillsTab(),
           InterestTab(),
@@ -146,7 +155,9 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
 }
 
 class PersonalInformationTab extends StatelessWidget {
-  const PersonalInformationTab({super.key});
+  final VoidCallback onTap;
+
+  const PersonalInformationTab({Key? key, required this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -187,6 +198,7 @@ class PersonalInformationTab extends StatelessWidget {
             leading: Icon(Icons.person),
             title: Text('Username'),
             subtitle: Text('Guido van Rossum'),
+            onTap: onTap, // Open dialog on tap
           ),
           ListTile(
             leading: Icon(Icons.cake),
