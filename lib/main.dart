@@ -160,7 +160,8 @@ class PersonalInformationTab extends StatelessWidget {
         ),
         const SizedBox(height: 5),
         Center(
-          child: Text(
+          child: 
+          Text(
             'Creator of Python',
             style: const TextStyle(
               fontSize: 12,
