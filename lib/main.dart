@@ -99,20 +99,188 @@ class _TabBarExampleState extends State<TabBarExample>
       body: TabBarView(
         controller: _tabController,
         children: const <Widget>[
+          PersonalInformationTab(),
+          EducationalBackgroundTab(),
+          SkillsTab(),
+          InterestTab(),
+          ContactDetailsTab(),
+        ],
+      ),
+    );
+  }
+}
+
+class PersonalInformationTab extends StatelessWidget {
+  const PersonalInformationTab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
           Center(
-            child: Text("Personal Information Content"),
+            child: CircleAvatar(
+              radius: 50,
+              backgroundImage: NetworkImage(''), // Replace with your profile image URL
+            ),
           ),
+          SizedBox(height: 16),
           Center(
-            child: Text("Educational Background Content"),
+            child: Text(
+              'John Doe',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
-          Center(
-            child: Text("Skills Content"),
+          SizedBox(height: 8),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.person),
+            title: Text('Username'),
+            subtitle: Text('Guido van Rossum'),
           ),
-          Center(
-            child: Text("Interest Content"),
+          ListTile(
+            leading: Icon(Icons.cake),
+            title: Text('Date of Birth'),
+            subtitle: Text('January 1, 1990'),
           ),
-          Center(
-            child: Text("Contact Details Content"),
+          ListTile(
+            leading: Icon(Icons.location_city),
+            title: Text('City'),
+            subtitle: Text('New York'),
+          ),
+          ListTile(
+            leading: Icon(Icons.work),
+            title: Text('Occupation'),
+            subtitle: Text('Software Developer'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class EducationalBackgroundTab extends StatelessWidget {
+  const EducationalBackgroundTab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          ListTile(
+            leading: Icon(Icons.school),
+            title: Text('High School'),
+            subtitle: Text('ABC High School, Graduated 2008'),
+          ),
+          ListTile(
+            leading: Icon(Icons.school),
+            title: Text('Bachelor\'s Degree'),
+            subtitle: Text('XYZ University, Computer Science, Graduated 2012'),
+          ),
+          ListTile(
+            leading: Icon(Icons.school),
+            title: Text('Master\'s Degree'),
+            subtitle: Text('LMN University, Software Engineering, Graduated 2015'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SkillsTab extends StatelessWidget {
+  const SkillsTab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          ListTile(
+            leading: Icon(Icons.code),
+            title: Text('Programming Languages'),
+            subtitle: Text('Dart, Python, Java, JavaScript'),
+          ),
+          ListTile(
+            leading: Icon(Icons.computer),
+            title: Text('Frameworks'),
+            subtitle: Text('Flutter, React, Angular'),
+          ),
+          ListTile(
+            leading: Icon(Icons.storage),
+            title: Text('Databases'),
+            subtitle: Text('MySQL, PostgreSQL, MongoDB'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class InterestTab extends StatelessWidget {
+  const InterestTab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          ListTile(
+            leading: Icon(Icons.book),
+            title: Text('Reading'),
+            subtitle: Text('Fiction, Non-fiction, Technology'),
+          ),
+          ListTile(
+            leading: Icon(Icons.sports_soccer),
+            title: Text('Sports'),
+            subtitle: Text('Soccer, Basketball'),
+          ),
+          ListTile(
+            leading: Icon(Icons.music_note),
+            title: Text('Music'),
+            subtitle: Text('Playing guitar, Piano'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ContactDetailsTab extends StatelessWidget {
+  const ContactDetailsTab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          ListTile(
+            leading: Icon(Icons.phone),
+            title: Text('Phone'),
+            subtitle: Text('+123 456 7890'),
+          ),
+          ListTile(
+            leading: Icon(Icons.email),
+            title: Text('Email'),
+            subtitle: Text('example@example.com'),
+          ),
+          ListTile(
+            leading: Icon(Icons.location_on),
+            title: Text('Address'),
+            subtitle: Text('123 Street, City, Country'),
           ),
         ],
       ),
