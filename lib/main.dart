@@ -32,7 +32,7 @@ class _TabBarExampleState extends State<TabBarExample>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 4, vsync: this); // Updated length to 4
+    _tabController = TabController(length: 5, vsync: this); // Updated length to 4
   }
 
   @override
@@ -45,26 +45,30 @@ class _TabBarExampleState extends State<TabBarExample>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TabBar Here'),
+        title: const Text('Personal Information'),
         bottom: TabBar(
           controller: _tabController,
           tabs: const <Widget>[
             Tab(
-              icon: Icon(Icons.cloud_outlined),
+              icon: Icon(Icons.person),
               text: "Personal Information",
             ),
             Tab(
-              icon: Icon(Icons.beach_access_sharp),
+              icon: Icon(Icons.cast_for_education),
               text: "Educational Background",
             ),
             Tab(
-              icon: Icon(Icons.brightness_5_sharp),
+              icon: Icon(Icons.arrow_upward),
               text: "Skills",
             ),
             Tab(
               icon: Icon(Icons.star),
               text: "Interest",
             ),
+            Tab(
+              icon: Icon(Icons.email),
+              text: "Contact Details",
+            )
           ],
         ),
       ),
@@ -83,6 +87,8 @@ class _TabBarExampleState extends State<TabBarExample>
           Center(
             child: Text("Interest Content"),
           ),
+          Center(child: Text("Contact Details")
+          ,)
         ],
       ),
     );
