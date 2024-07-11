@@ -12,7 +12,7 @@ class TabBarApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark, // Set dark mode
         appBarTheme: AppBarTheme(
-          backgroundColor: const Color.fromARGB(255, 39, 39, 39),
+          backgroundColor: Color.fromARGB(255, 41, 41, 41),
         ),
         tabBarTheme: TabBarTheme(
           labelColor: Colors.white, // Set label color for selected tab
