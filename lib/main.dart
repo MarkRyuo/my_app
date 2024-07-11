@@ -8,7 +8,25 @@ class TabBarApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(useMaterial3: true),
+      theme: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark, // Set dark mode
+        appBarTheme: AppBarTheme(
+          backgroundColor: Color(0xFF9CDBA6), // Vintage color for app bar
+        ),
+        tabBarTheme: TabBarTheme(
+          labelColor: Color(0xFFDEF9C4), // Vintage color for selected tab label
+          unselectedLabelColor: Colors.white,
+          indicator: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                color: Color(0xFF468585), // Vintage color for tab indicator
+                width: 2.0,
+              ),
+            ),
+          ),
+        ),
+      ),
       home: const TabBarExample(),
     );
   }
@@ -21,8 +39,7 @@ class TabBarExample extends StatefulWidget {
   State<TabBarExample> createState() => _TabBarExampleState();
 }
 
-class _TabBarExampleState extends State<TabBarExample>
-    with TickerProviderStateMixin {
+class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateMixin {
   late final TabController _tabController;
   final List<String> _titles = [
     "Personal Information",
@@ -67,7 +84,12 @@ class _TabBarExampleState extends State<TabBarExample>
           children: [
             Icon(_currentIcon),
             SizedBox(width: 8),
-            Text(_currentTitle),
+            Text(
+              _currentTitle,
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+            ),
           ],
         ),
         bottom: TabBar(
@@ -135,7 +157,6 @@ class PersonalInformationTab extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            
           ),
           SizedBox(height: 12),
           Center(
@@ -146,7 +167,6 @@ class PersonalInformationTab extends StatelessWidget {
                 fontWeight: FontWeight.normal,
               ),
             ),
-            
           ),
           SizedBox(height: 8),
           Divider(),
