@@ -319,7 +319,7 @@ class ContactDetailsTab extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Facebook: Guido van Rossum'),
-                Text('Instagram: '),
+                Text('Instagram: its_me_Guido_)'),
               ],
             ),
           ),
