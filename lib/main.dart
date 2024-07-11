@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(const TabBarApp());
 
 class TabBarApp extends StatelessWidget {
-  const TabBarApp({super.key});
+  const TabBarApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class TabBarApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark, // Set dark mode
         appBarTheme: AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 39, 39, 39), 
+          backgroundColor: Color.fromARGB(255, 39, 39, 39),
         ),
         tabBarTheme: TabBarTheme(
           labelColor: Colors.white, // Set label color for selected tab
@@ -33,13 +33,14 @@ class TabBarApp extends StatelessWidget {
 }
 
 class TabBarExample extends StatefulWidget {
-  const TabBarExample({super.key});
+  const TabBarExample({Key? key}) : super(key: key);
 
   @override
   State<TabBarExample> createState() => _TabBarExampleState();
 }
 
-class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateMixin {
+class _TabBarExampleState extends State<TabBarExample>
+    with TickerProviderStateMixin {
   late final TabController _tabController;
   final List<String> _titles = [
     "Personal Information",
@@ -133,7 +134,7 @@ class _TabBarExampleState extends State<TabBarExample> with TickerProviderStateM
 }
 
 class PersonalInformationTab extends StatelessWidget {
-  const PersonalInformationTab({super.key});
+  const PersonalInformationTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -145,7 +146,8 @@ class PersonalInformationTab extends StatelessWidget {
           Center(
             child: CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage('/home/acr/Documents/FlutterApplication/my_app/lib/Image/Guido-portrait-2014.jpg'), // Profile image URL
+              backgroundImage: AssetImage(
+                  '/home/acr/Documents/FlutterApplication/my_app/lib/Image/Guido-portrait-2014.jpg'), // Profile image URL
             ),
           ),
           SizedBox(height: 16),
@@ -197,7 +199,7 @@ class PersonalInformationTab extends StatelessWidget {
 }
 
 class EducationalBackgroundTab extends StatelessWidget {
-  const EducationalBackgroundTab({super.key});
+  const EducationalBackgroundTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -214,7 +216,8 @@ class EducationalBackgroundTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.school),
             title: Text('Bachelor\'s Degree'),
-            subtitle: Text('University of Amsterdam, Mathematics and Computer Science, Graduated 1982'),
+            subtitle: Text(
+                'University of Amsterdam, Mathematics and Computer Science, Graduated 1982'),
           ),
         ],
       ),
@@ -223,7 +226,7 @@ class EducationalBackgroundTab extends StatelessWidget {
 }
 
 class SkillsTab extends StatelessWidget {
-  const SkillsTab({super.key});
+  const SkillsTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -254,7 +257,7 @@ class SkillsTab extends StatelessWidget {
 }
 
 class InterestTab extends StatelessWidget {
-  const InterestTab({super.key});
+  const InterestTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -285,7 +288,7 @@ class InterestTab extends StatelessWidget {
 }
 
 class ContactDetailsTab extends StatelessWidget {
-  const ContactDetailsTab({super.key});
+  const ContactDetailsTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -309,18 +312,16 @@ class ContactDetailsTab extends StatelessWidget {
             title: Text('Address'),
             subtitle: Text('369 Street, Belmont, California, USA'),
           ),
-         ListTile(
+          ListTile(
             leading: Icon(Icons.location_on),
             title: Text('Social Media'),
             subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Facebook: Guido van Rossum'),
-              Text('Instagram: '),
-    ],
-  ),
-);
-
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Facebook: Guido van Rossum'),
+                Text('Instagram: '),
+              ],
+            ),
           ),
         ],
       ),
