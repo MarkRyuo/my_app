@@ -160,7 +160,7 @@ class PersonalInformationTab extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 12),
+          SizedBox(height: ),
           Center(
             child: Text(
               'Creator of Python',
@@ -279,7 +279,7 @@ class InterestTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.travel_explore),
             title: Text('Travel'),
-            subtitle: Text('Exploring, countries cultures'),
+            subtitle: Text('Exploring, countries & cultures'),
           ),
         ],
       ),
