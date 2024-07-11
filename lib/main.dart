@@ -32,7 +32,7 @@ class _TabBarExampleState extends State<TabBarExample>
   @override
   void initState() {
     super.initState();
-_tabController = TabController(length: 6, vsync: this);
+    _tabController = TabController(length: 4, vsync: this); // Updated length to 4
   }
 
   @override
@@ -55,16 +55,16 @@ _tabController = TabController(length: 6, vsync: this);
             ),
             Tab(
               icon: Icon(Icons.beach_access_sharp),
-              text: "Educational Background"
+              text: "Educational Background",
             ),
             Tab(
               icon: Icon(Icons.brightness_5_sharp),
               text: "Skills",
             ),
             Tab(
-              icon: Icon(Icons.brightness_5_sharp),
+              icon: Icon(Icons.star),
               text: "Interest",
-            )
+            ),
           ],
         ),
       ),
@@ -72,13 +72,16 @@ _tabController = TabController(length: 6, vsync: this);
         controller: _tabController,
         children: const <Widget>[
           Center(
-            child: Text("It's cloudy here"),
+            child: Text("Personal Information Content"),
           ),
           Center(
-            child: Text("It's rainy here"),
+            child: Text("Educational Background Content"),
           ),
           Center(
-            child: Text("It's sunny here"),
+            child: Text("Skills Content"),
+          ),
+          Center(
+            child: Text("Interest Content"),
           ),
         ],
       ),
