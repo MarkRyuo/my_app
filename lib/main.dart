@@ -165,7 +165,7 @@ class PersonalInformationTab extends StatelessWidget {
             child: Text(
               'Creator of Python',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 11,
                 fontWeight: FontWeight.normal,
               ),
             ),
