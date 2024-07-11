@@ -212,7 +212,7 @@ class EducationalBackgroundTab extends StatelessWidget {
           leading: const Icon(Icons.school),
           title: const Text('Bachelor\'s Degree'),
           subtitle: const Text(
-              'University of Amsterdam, Masters Degree in Mathematics and Computer Science.'),
+              'University of Amsterdam, Master\'s Degree in Mathematics and Computer Science.'),
         ),
         ListTile(
           leading: const Icon(Icons.school),
