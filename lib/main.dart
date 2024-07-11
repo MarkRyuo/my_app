@@ -12,7 +12,7 @@ class TabBarApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark, // Set dark mode
         appBarTheme: AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 39, 39, 39),
+          backgroundColor: const Color.fromARGB(255, 39, 39, 39),
         ),
         tabBarTheme: TabBarTheme(
           labelColor: Colors.white, // Set label color for selected tab
@@ -84,10 +84,10 @@ class _TabBarExampleState extends State<TabBarExample>
         title: Row(
           children: [
             Icon(_currentIcon),
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             Text(
               _currentTitle,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20.0,
               ),
             ),
@@ -97,23 +97,23 @@ class _TabBarExampleState extends State<TabBarExample>
           controller: _tabController,
           tabs: <Widget>[
             Tab(
-              icon: Icon(Icons.person),
+              icon: const Icon(Icons.person),
               text: "Personal Information",
             ),
             Tab(
-              icon: Icon(Icons.cast_for_education),
+              icon: const Icon(Icons.cast_for_education),
               text: "Educational Background",
             ),
             Tab(
-              icon: Icon(Icons.arrow_upward),
+              icon: const Icon(Icons.arrow_upward),
               text: "Skills",
             ),
             Tab(
-              icon: Icon(Icons.star),
+              icon: const Icon(Icons.star),
               text: "Interest",
             ),
             Tab(
-              icon: Icon(Icons.email),
+              icon: const Icon(Icons.email),
               text: "Contact Details",
             ),
           ],
@@ -121,12 +121,12 @@ class _TabBarExampleState extends State<TabBarExample>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: const <Widget>[
-          PersonalInformationTab(),
-          EducationalBackgroundTab(),
-          SkillsTab(),
-          InterestTab(),
-          ContactDetailsTab(),
+        children: <Widget>[
+          const PersonalInformationTab(),
+          const EducationalBackgroundTab(),
+          const SkillsTab(),
+          const InterestTab(),
+          const ContactDetailsTab(),
         ],
       ),
     );
@@ -138,68 +138,64 @@ class PersonalInformationTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return ListView(
       padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Center(
-            child: CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage(
-                  '/home/acr/Documents/FlutterApplication/my_app/lib/Image/Guido-portrait-2014.jpg'), // Profile image URL
+      children: <Widget>[
+        Center(
+          child: CircleAvatar(
+            radius: 50,
+            backgroundImage: AssetImage(
+                '/home/acr/Documents/FlutterApplication/my_app/lib/Image/Guido-portrait-2014.jpg'), // Profile image URL
+          ),
+        ),
+        const SizedBox(height: 16),
+        Center(
+          child: Text(
+            'Guido van Rossum',
+            style: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 16),
-          Center(
-            child: Text(
-              'Guido van Rossum',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+        ),
+        const SizedBox(height: 5),
+        Center(
+          child: Text(
+            'Creator of Python',
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
             ),
           ),
-          SizedBox(height: 5),
-          Center(
-            child: Text(
-              'Creator of Python',
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.normal,
-              ),
-            ),
-          ),
-          SizedBox(height: 8),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Name'),
-            subtitle: Text('Guido van Rossum'),
-          ),
-          ListTile(
-            leading: Icon(Icons.cake),
-            title: Text('Date of Birth'),
-            subtitle: Text('January 31, 1956'),
-          ),
-          ListTile(
-            leading: Icon(Icons.location_city),
-            title: Text('City'),
-            subtitle: Text('Belmont, California, USA'),
-          ),
-          ListTile(
-            leading: Icon(Icons.work),
-            title: Text('Occupation'),
-            subtitle: Text('Developer'),
-          ),
-          ListTile(
-            leading: Icon(Icons.work),
-            title: Text('Brief Bio'),
-            subtitle: Text('Guido van Rossum is the creator of the Python programming language'),
-          ),
-          
-        ],
-      ),
+        ),
+        const SizedBox(height: 8),
+        const Divider(),
+        ListTile(
+          leading: const Icon(Icons.person),
+          title: const Text('Name'),
+          subtitle: const Text('Guido van Rossum'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.cake),
+          title: const Text('Date of Birth'),
+          subtitle: const Text('January 31, 1956'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.location_city),
+          title: const Text('City'),
+          subtitle: const Text('Belmont, California, USA'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.work),
+          title: const Text('Occupation'),
+          subtitle: const Text('Developer'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.biotech),
+          title: const Text('Brief Bio'),
+          subtitle: const Text('Guido van Rossum is the creator of the Python programming language'),
+        ),
+      ],
     );
   }
 }
@@ -209,24 +205,26 @@ class EducationalBackgroundTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return ListView(
       padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.school),
-            title: Text('High School'),
-            subtitle: Text('Montessori Lyceum Amsterdam, Graduated 1974'),
-          ),
-          ListTile(
-            leading: Icon(Icons.school),
-            title: Text('Bachelor\'s Degree'),
-            subtitle: Text(
-                'University of Amsterdam, Mathematics and Computer Science, Graduated 1982'),
-          ),
-        ],
-      ),
+      children: <Widget>[
+        ListTile(
+          leading: const Icon(Icons.school),
+          title: const Text('Bachelor\'s Degree'),
+          subtitle: const Text(
+              'University of Amsterdam, Masters Degree in Mathematics and Computer Science.'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.school),
+          title: const Text('High School'),
+          subtitle: const Text('Montessori Lyceum Amsterdam, Graduated 1974'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.school),
+          title: const Text('Elementary'),
+          subtitle: const Text('Montessori Lyceum Amsterdam, Graduated 1968'),
+        ),
+      ],
     );
   }
 }
@@ -236,28 +234,25 @@ class SkillsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return ListView(
       padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.code),
-            title: Text('Programming Languages'),
-            subtitle: Text('Python, C, C++, Java, Dart'),
-          ),
-          ListTile(
-            leading: Icon(Icons.computer),
-            title: Text('Frameworks and Tools'),
-            subtitle: Text('Unix, Flutter, React/React Native'),
-          ),
-          ListTile(
-            leading: Icon(Icons.storage),
-            title: Text('Databases'),
-            subtitle: Text('MySQL, PostgreSQL, NoSql'),
-          ),
-        ],
-      ),
+      children: <Widget>[
+        ListTile(
+          leading: const Icon(Icons.code),
+          title: const Text('Programming Languages'),
+          subtitle: const Text('Python, C, C++, Java, Dart'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.computer),
+          title: const Text('Frameworks and Tools'),
+          subtitle: const Text('Unix, Flutter, React/React Native'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.storage),
+          title: const Text('Databases'),
+          subtitle: const Text('MySQL, PostgreSQL, NoSql'),
+        ),
+      ],
     );
   }
 }
@@ -267,28 +262,25 @@ class InterestTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return ListView(
       padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.book),
-            title: Text('Reading'),
-            subtitle: Text('Technology, Science Fiction'),
-          ),
-          ListTile(
-            leading: Icon(Icons.sports_tennis),
-            title: Text('Sports'),
-            subtitle: Text('Biking & Basketball'),
-          ),
-          ListTile(
-            leading: Icon(Icons.travel_explore),
-            title: Text('Travel'),
-            subtitle: Text('Exploring, countries & cultures'),
-          ),
-        ],
-      ),
+      children: <Widget>[
+        ListTile(
+          leading: const Icon(Icons.book),
+          title: const Text('Reading'),
+          subtitle: const Text('Technology, Science Fiction'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.sports_tennis),
+          title: const Text('Sports'),
+          subtitle: const Text('Biking & Basketball'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.travel_explore),
+          title: const Text('Travel'),
+          subtitle: const Text('Exploring, countries & cultures'),
+        ),
+      ],
     );
   }
 }
@@ -298,39 +290,36 @@ class ContactDetailsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return ListView(
       padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.phone),
-            title: Text('Phone Number'),
-            subtitle: Text('+1 234 764 3490'),
+      children: <Widget>[
+        ListTile(
+          leading: const Icon(Icons.phone),
+          title: const Text('Phone Number'),
+          subtitle: const Text('+1 234 764 3490'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.email),
+          title: const Text('Email'),
+          subtitle: const Text('guido@email.com'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.location_on),
+          title: const Text('Address'),
+          subtitle: const Text('369 Street, Belmont, California, USA'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.location_on),
+          title: const Text('Social Media'),
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text('Facebook: Guido van Rossum'),
+              Text('Instagram: its_me_Guido_van)'),
+            ], // Child of Social Media
           ),
-          ListTile(
-            leading: Icon(Icons.email),
-            title: Text('Email'),
-            subtitle: Text('guido@email.com'),
-          ),
-          ListTile(
-            leading: Icon(Icons.location_on),
-            title: Text('Address'),
-            subtitle: Text('369 Street, Belmont, California, USA'),
-          ),
-          ListTile(
-            leading: Icon(Icons.location_on),
-            title: Text('Social Media'),
-            subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Facebook: Guido van Rossum'),
-                Text('Instagram: its_me_Guido_van)'),
-              ], // Child of Social Media
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
