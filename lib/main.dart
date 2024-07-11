@@ -243,7 +243,7 @@ class SkillsTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.computer),
             title: Text('Frameworks and Tools'),
-            subtitle: Text('Unix, Flutter'),
+            subtitle: Text('Unix, Flutter, React/React Native'),
           ),
           ListTile(
             leading: Icon(Icons.storage),
