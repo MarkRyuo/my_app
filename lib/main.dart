@@ -282,12 +282,12 @@ class ContactDetailsTab extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.email),
             title: Text('Email'),
-            subtitle: Text('guido@example.com'),
+            subtitle: Text('guido@email.com'),
           ),
           ListTile(
             leading: Icon(Icons.location_on),
             title: Text('Address'),
-            subtitle: Text('123 Street, Belmont, California, USA'),
+            subtitle: Text('369 Street, Belmont, California, USA'),
           ),
         ],
       ),
