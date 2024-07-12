@@ -295,10 +295,10 @@ class ContactDetailsTab extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(16.0),
       children: <Widget>[
-        ListTile(
-          leading: const Icon(Icons.phone),
-          title: const Text('Phone Number'),
-          subtitle: const Text('+1 234 764 3490'),
+        const ListTile(
+          leading: Icon(Icons.phone),
+          title: Text('Phone Number'),
+          subtitle: Text('+1 234 764 3490'),
         ),
         ListTile(
           leading: const Icon(Icons.email),
