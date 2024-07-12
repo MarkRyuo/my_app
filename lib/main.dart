@@ -177,8 +177,8 @@ class PersonalInformationTab extends StatelessWidget {
           subtitle: Text('Guido van Rossum'),
         ),
         const ListTile(
-          leading: const Icon(Icons.cake),
-          title: const Text('Date of Birth'),
+          leading: Icon(Icons.cake),
+          title: Text('Date of Birth'),
           subtitle: const Text('January 31, 1956'),
         ),
         const ListTile(
