@@ -176,12 +176,12 @@ class PersonalInformationTab extends StatelessWidget {
           title: const Text('Name'),
           subtitle: const Text('Guido van Rossum'),
         ),
-        ListTile(
+        const ListTile(
           leading: const Icon(Icons.cake),
           title: const Text('Date of Birth'),
           subtitle: const Text('January 31, 1956'),
         ),
-        ListTile(
+        const ListTile(
           leading: const Icon(Icons.location_city),
           title: const Text('City'),
           subtitle: const Text('Belmont, California, USA'),
