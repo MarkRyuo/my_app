@@ -173,8 +173,8 @@ class PersonalInformationTab extends StatelessWidget {
         const Divider(),
         const ListTile(
           leading: Icon(Icons.person),
-          title: const Text('Name'),
-          subtitle: const Text('Guido van Rossum'),
+          title: Text('Name'),
+          subtitle: Text('Guido van Rossum'),
         ),
         const ListTile(
           leading: const Icon(Icons.cake),
