@@ -301,9 +301,9 @@ class ContactDetailsTab extends StatelessWidget {
           subtitle: Text('+1 234 764 3490'),
         ),
         const ListTile(
-          leading: const Icon(Icons.email),
-          title: const Text('Email'),
-          subtitle: const Text('guido@email.com'),
+          leading: Icon(Icons.email),
+          title: Text('Email'),
+          subtitle: Text('guido@email.com'),
         ),
         ListTile(
           leading: const Icon(Icons.location_on),
