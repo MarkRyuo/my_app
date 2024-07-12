@@ -186,7 +186,7 @@ class PersonalInformationTab extends StatelessWidget {
           title: const Text('City'),
           subtitle: const Text('Belmont, California, USA'),
         ),
-        ListTile(
+        const ListTile(
           leading: const Icon(Icons.work),
           title: const Text('Occupation'),
           subtitle: const Text('Developer'),
