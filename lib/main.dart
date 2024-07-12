@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(const TabBarApp());
 
 class TabBarApp extends StatelessWidget {
-  const TabBarApp({Key? key}) : super(key: key);
+  const TabBarApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +11,10 @@ class TabBarApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         brightness: Brightness.dark, // Set dark mode
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: Color.fromARGB(255, 41, 41, 41),
         ),
-        tabBarTheme: TabBarTheme(
+        tabBarTheme: const TabBarTheme(
           labelColor: Colors.white, // Set label color for selected tab
           unselectedLabelColor: Colors.white60, // Set color for unselected tabs
           indicator: BoxDecoration(
