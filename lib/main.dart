@@ -216,10 +216,10 @@ class EducationalBackgroundTab extends StatelessWidget {
           subtitle: Text(
               'University of Amsterdam, Master\'s Degree in Mathematics and Computer Science.'),
         ),
-        ListTile(
-          leading: const Icon(Icons.school),
-          title: const Text('High School'),
-          subtitle: const Text('Lyceum Amsterdam, Graduated 1974'),
+        const ListTile(
+          leading: Icon(Icons.school),
+          title: Text('High School'),
+          subtitle: Text('Lyceum Amsterdam, Graduated 1974'),
         ),
         ListTile(
           leading: const Icon(Icons.school),
