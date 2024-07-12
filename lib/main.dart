@@ -152,7 +152,7 @@ class PersonalInformationTab extends StatelessWidget {
         const Center(
           child: Text(
             'Guido van Rossum',
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
