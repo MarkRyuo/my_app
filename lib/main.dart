@@ -113,7 +113,7 @@ class _TabBarExampleState extends State<TabBarExample>
               text: "Interest",
             ),
             const Tab(
-              icon: const Icon(Icons.email),
+              icon: Icon(Icons.email),
               text: "Contact Details",
             ),
           ],
