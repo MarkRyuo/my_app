@@ -269,8 +269,8 @@ class InterestTab extends StatelessWidget {
       children: <Widget>[
         const ListTile(
           leading: Icon(Icons.book),
-          title: const Text('Reading'),
-          subtitle: const Text('Technology, Science Fiction'),
+          title: Text('Reading'),
+          subtitle:Text('Technology, Science Fiction'),
         ),
         ListTile(
           leading: const Icon(Icons.sports_tennis),
