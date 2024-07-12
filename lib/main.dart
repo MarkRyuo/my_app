@@ -179,7 +179,7 @@ class PersonalInformationTab extends StatelessWidget {
         const ListTile(
           leading: Icon(Icons.cake),
           title: Text('Date of Birth'),
-          subtitle: const Text('January 31, 1956'),
+          subtitle: Text('January 31, 1956'),
         ),
         const ListTile(
           leading: const Icon(Icons.location_city),
