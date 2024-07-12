@@ -33,7 +33,7 @@ class TabBarApp extends StatelessWidget {
 }
 
 class TabBarExample extends StatefulWidget {
-  const TabBarExample({Key? key}) : super(key: key);
+  const TabBarExample({super.key});
 
   @override
   State<TabBarExample> createState() => _TabBarExampleState();
@@ -141,7 +141,7 @@ class PersonalInformationTab extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(16.0),
       children: <Widget>[
-        Center(
+        const Center(
           child: CircleAvatar(
             radius: 50,
             backgroundImage: AssetImage(
@@ -149,7 +149,7 @@ class PersonalInformationTab extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        Center(
+        const Center(
           child: Text(
             'Guido van Rossum',
             style: const TextStyle(
