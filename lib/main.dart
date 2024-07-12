@@ -238,18 +238,18 @@ class SkillsTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16.0),
-      children: <Widget>[
-        const ListTile(
+      children: const <Widget>[
+        ListTile(
           leading: Icon(Icons.code),
           title:  Text('Programming Languages'),
           subtitle: Text('Python, C, C++, Java, Dart'),
         ),
-        const ListTile(
+        ListTile(
           leading: Icon(Icons.computer),
           title: Text('Frameworks and Tools'),
           subtitle: Text('Unix, Flutter, React/React Native'),
         ),
-        const ListTile(
+        ListTile(
           leading: Icon(Icons.storage),
           title: Text('Databases'),
           subtitle: Text('MySQL, PostgreSQL, NoSql'),
@@ -294,28 +294,28 @@ class ContactDetailsTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16.0),
-      children: <Widget>[
-        const ListTile(
+      children: const <Widget>[
+        ListTile(
           leading: Icon(Icons.phone),
           title: Text('Phone Number'),
           subtitle: Text('+1 234 764 3490'),
         ),
-        const ListTile(
+        ListTile(
           leading: Icon(Icons.email),
           title: Text('Email'),
           subtitle: Text('guido@email.com'),
         ),
-        const ListTile(
+        ListTile(
           leading: Icon(Icons.location_on),
           title: Text('Address'),
           subtitle:Text('369 Street, Belmont, California, USA'),
         ),
-        const ListTile(
+        ListTile(
           leading: Icon(Icons.location_on),
           title: Text('Social Media'),
           subtitle: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text('Facebook: Guido van Rossum'),
               Text('Instagram: its_me_Guido_van)'),
             ], // Child of Social Media
