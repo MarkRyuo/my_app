@@ -104,15 +104,15 @@ class _TabBarExampleState extends State<TabBarExample>
               icon: Icon(Icons.cast_for_education),
               text: "Educational Background",
             ),
-            Tab(
-              icon: const Icon(Icons.arrow_upward),
+            const Tab(
+              icon: Icon(Icons.arrow_upward),
               text: "Skills",
             ),
-            Tab(
-              icon: const Icon(Icons.star),
+            const Tab(
+              icon: Icon(Icons.star),
               text: "Interest",
             ),
-            Tab(
+            const Tab(
               icon: const Icon(Icons.email),
               text: "Contact Details",
             ),
