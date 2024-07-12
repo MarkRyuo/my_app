@@ -203,7 +203,7 @@ class PersonalInformationTab extends StatelessWidget {
 }
 
 class EducationalBackgroundTab extends StatelessWidget {
-  const EducationalBackgroundTab({Key? key}) : super(key: key);
+  const EducationalBackgroundTab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -266,18 +266,18 @@ class InterestTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16.0),
-      children: <Widget>[
-        const ListTile(
+      children: const <Widget>[
+        ListTile(
           leading: Icon(Icons.book),
           title: Text('Reading'),
           subtitle:Text('Technology, Science Fiction'),
         ),
-        const ListTile(
+        ListTile(
           leading: Icon(Icons.sports_tennis),
           title: Text('Sports'),
           subtitle:Text('Biking & Basketball'),
         ),
-        const ListTile(
+        ListTile(
           leading: Icon(Icons.travel_explore),
           title: Text('Travel'),
           subtitle: Text('Exploring, countries & cultures'),
