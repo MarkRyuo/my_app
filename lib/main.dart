@@ -211,9 +211,9 @@ class EducationalBackgroundTab extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       children: <Widget>[
         const ListTile(
-          leading: const Icon(Icons.school),
-          title: const Text('Bachelor\'s Degree'),
-          subtitle: const Text(
+          leading: Icon(Icons.school),
+          title: Text('Bachelor\'s Degree'),
+          subtitle: Text(
               'University of Amsterdam, Master\'s Degree in Mathematics and Computer Science.'),
         ),
         ListTile(
