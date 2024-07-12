@@ -221,10 +221,10 @@ class EducationalBackgroundTab extends StatelessWidget {
           title: Text('High School'),
           subtitle: Text('Lyceum Amsterdam, Graduated 1974'),
         ),
-        ListTile(
-          leading: const Icon(Icons.school),
-          title: const Text('Elementary'),
-          subtitle: const Text('Montessori Lyceum Amsterdam, Graduated 1968'),
+        const ListTile(
+          leading: Icon(Icons.school),
+          title: Text('Elementary'),
+          subtitle:Text('Montessori Lyceum Amsterdam, Graduated 1968'),
         ),
       ],
     );
