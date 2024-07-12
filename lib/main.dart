@@ -305,10 +305,10 @@ class ContactDetailsTab extends StatelessWidget {
           title: Text('Email'),
           subtitle: Text('guido@email.com'),
         ),
-        ListTile(
-          leading: const Icon(Icons.location_on),
-          title: const Text('Address'),
-          subtitle: const Text('369 Street, Belmont, California, USA'),
+        const ListTile(
+          leading: Icon(Icons.location_on),
+          title: Text('Address'),
+          subtitle: Text('369 Street, Belmont, California, USA'),
         ),
         ListTile(
           leading: const Icon(Icons.location_on),
