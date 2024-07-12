@@ -192,9 +192,10 @@ class PersonalInformationTab extends StatelessWidget {
           subtitle: Text('Developer'),
         ),
         const ListTile(
-          leading: const Icon(Icons.biotech),
-          title: const Text('Brief Bio'),
-          subtitle: const Text('Guido van Rossum is the creator of the Python programming language'),
+          leading: Icon(Icons.biotech),
+          title: Text('Brief Bio'),
+          subtitle: 
+          Text('Guido van Rossum is the creator of the Python programming language'),
         ),
       ],
     );
@@ -209,7 +210,7 @@ class EducationalBackgroundTab extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(16.0),
       children: <Widget>[
-        ListTile(
+        const ListTile(
           leading: const Icon(Icons.school),
           title: const Text('Bachelor\'s Degree'),
           subtitle: const Text(
