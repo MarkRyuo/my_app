@@ -188,8 +188,8 @@ class PersonalInformationTab extends StatelessWidget {
         ),
         const ListTile(
           leading: Icon(Icons.work),
-          title: const Text('Occupation'),
-          subtitle: const Text('Developer'),
+          title: Text('Occupation'),
+          subtitle: Text('Developer'),
         ),
         const ListTile(
           leading: const Icon(Icons.biotech),
