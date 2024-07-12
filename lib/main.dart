@@ -249,8 +249,8 @@ class SkillsTab extends StatelessWidget {
           title: Text('Frameworks and Tools'),
           subtitle: Text('Unix, Flutter, React/React Native'),
         ),
-        ListTile(
-          leading: const Icon(Icons.storage),
+        const ListTile(
+          leading: Icon(Icons.storage),
           title: const Text('Databases'),
           subtitle: const Text('MySQL, PostgreSQL, NoSql'),
         ),
