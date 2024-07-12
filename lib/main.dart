@@ -251,8 +251,8 @@ class SkillsTab extends StatelessWidget {
         ),
         const ListTile(
           leading: Icon(Icons.storage),
-          title: const Text('Databases'),
-          subtitle: const Text('MySQL, PostgreSQL, NoSql'),
+          title: Text('Databases'),
+          subtitle: Text('MySQL, PostgreSQL, NoSql'),
         ),
       ],
     );
