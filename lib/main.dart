@@ -308,11 +308,11 @@ class ContactDetailsTab extends StatelessWidget {
         const ListTile(
           leading: Icon(Icons.location_on),
           title: Text('Address'),
-          subtitle: Text('369 Street, Belmont, California, USA'),
+          subtitle:Text('369 Street, Belmont, California, USA'),
         ),
-        ListTile(
-          leading: const Icon(Icons.location_on),
-          title: const Text('Social Media'),
+        const ListTile(
+          leading: Icon(Icons.location_on),
+          title: Text('Social Media'),
           subtitle: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
