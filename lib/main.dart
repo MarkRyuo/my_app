@@ -96,12 +96,12 @@ class _TabBarExampleState extends State<TabBarExample>
         bottom: TabBar(
           controller: _tabController,
           tabs: <Widget>[
-            Tab(
-              icon: const Icon(Icons.person),
+            const Tab(
+              icon: Icon(Icons.person),
               text: "Personal Information",
             ),
-            Tab(
-              icon: const Icon(Icons.cast_for_education),
+            const Tab(
+              icon: Icon(Icons.cast_for_education),
               text: "Educational Background",
             ),
             Tab(
