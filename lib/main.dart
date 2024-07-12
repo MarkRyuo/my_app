@@ -260,15 +260,15 @@ class SkillsTab extends StatelessWidget {
 }
 
 class InterestTab extends StatelessWidget {
-  const InterestTab({Key? key}) : super(key: key);
+  const InterestTab({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16.0),
       children: <Widget>[
-        ListTile(
-          leading: const Icon(Icons.book),
+        const ListTile(
+          leading: Icon(Icons.book),
           title: const Text('Reading'),
           subtitle: const Text('Technology, Science Fiction'),
         ),
