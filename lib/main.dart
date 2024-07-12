@@ -191,7 +191,7 @@ class PersonalInformationTab extends StatelessWidget {
           title: const Text('Occupation'),
           subtitle: const Text('Developer'),
         ),
-        ListTile(
+        const ListTile(
           leading: const Icon(Icons.biotech),
           title: const Text('Brief Bio'),
           subtitle: const Text('Guido van Rossum is the creator of the Python programming language'),
