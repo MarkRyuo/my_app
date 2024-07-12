@@ -224,7 +224,7 @@ class EducationalBackgroundTab extends StatelessWidget {
         const ListTile(
           leading: Icon(Icons.school),
           title: Text('Elementary'),
-          subtitle:Text('Montessori Lyceum Amsterdam, Graduated 1968'),
+          subtitle: Text('Montessori Lyceum Amsterdam, Graduated 1968'),
         ),
       ],
     );
@@ -232,17 +232,17 @@ class EducationalBackgroundTab extends StatelessWidget {
 }
 
 class SkillsTab extends StatelessWidget {
-  const SkillsTab({Key? key}) : super(key: key);
+  const SkillsTab({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16.0),
       children: <Widget>[
-        ListTile(
-          leading: const Icon(Icons.code),
-          title: const Text('Programming Languages'),
-          subtitle: const Text('Python, C, C++, Java, Dart'),
+        const ListTile(
+          leading: Icon(Icons.code),
+          title:  Text('Programming Languages'),
+          subtitle: Text('Python, C, C++, Java, Dart'),
         ),
         ListTile(
           leading: const Icon(Icons.computer),
